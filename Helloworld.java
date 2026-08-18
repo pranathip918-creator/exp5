@@ -1,18 +1,11 @@
 
-pipeline {
-    agent any
+public class Addition {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
 
-    stages {
-        stage('Compile') {
-            steps {
-                sh 'javac HelloWorld.java'
-            }
-        }
+        int sum = a + b;
 
-        stage('Run') {
-            steps {
-                sh 'java HelloWorld'
-            }
-        }
+        System.out.println("Sum = " + sum);
     }
 }
